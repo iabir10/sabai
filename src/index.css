@@ -1,10 +1,7 @@
 /*
- * Mandatory directives to tell Tailwind CSS where to inject the base, 
- * components, and utility styles.
+ * Tailwind CSS v4 uses @import instead of @tailwind directives
  */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 /* Custom scrollbar hide for the app layout */
 .scrollbar-hide {
