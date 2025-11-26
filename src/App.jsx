@@ -185,11 +185,15 @@ const MOCK_JOBS = [
   { 
     id: 1, 
     title: 'พนักงานเสิร์ฟ (งานพาร์ทไทม์ เย็น)', 
-    titleEn: 'Part-Time Evening Server', 
+    titleEn: 'Part-Time Evening Server',
+    role: 'พนักงานเสิร์ฟ',
+    roleEn: 'Server',
     company: 'Roast Coffee - Thong Lo', 
     type: 'server', 
     distance: '0.8 km', 
-    pay: '฿250', 
+    pay: '฿250',
+    shiftStart: '18:00',
+    shiftEnd: '22:00',
     rating: 4.8, 
     image: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80',
     description: 'Part-time evening shift (3-4 hours). Perfect for students or those looking for extra income. Flexible schedule, work 2-3 days per week.',
@@ -200,11 +204,15 @@ const MOCK_JOBS = [
   { 
     id: 2, 
     title: 'ผู้ช่วยกุ๊ก (กะเที่ยง-บ่าย)', 
-    titleEn: 'Part-Time Line Cook (Lunch Shift)', 
+    titleEn: 'Part-Time Line Cook (Lunch Shift)',
+    role: 'ผู้ช่วยกุ๊ก',
+    roleEn: 'Line Cook',
     company: 'Somtum Der', 
     type: 'kitchen', 
     distance: '1.2 km', 
-    pay: '฿280', 
+    pay: '฿280',
+    shiftStart: '11:00',
+    shiftEnd: '15:00',
     rating: 4.5, 
     image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80',
     description: 'Lunch shift only (11AM-3PM). Great for students with morning classes. Weekend shifts available with extra pay.',
@@ -215,11 +223,15 @@ const MOCK_JOBS = [
   { 
     id: 3, 
     title: 'พนักงานล้างจาน (วันเสาร์-อาทิตย์)', 
-    titleEn: 'Weekend Dishwasher (Part-Time)', 
+    titleEn: 'Weekend Dishwasher (Part-Time)',
+    role: 'พนักงานล้างจาน',
+    roleEn: 'Dishwasher',
     company: 'Blue Elephant', 
     type: 'kitchen', 
     distance: '2.5 km', 
-    pay: '฿180', 
+    pay: '฿180',
+    shiftStart: '17:00',
+    shiftEnd: '23:00',
     rating: 4.2, 
     image: 'https://images.unsplash.com/photo-1581349485608-9469926a8e5e?w=800&q=80',
     description: 'Weekend shifts only (Sat-Sun, 5PM-11PM). Perfect for extra weekend income. Free dinner included.',
@@ -230,11 +242,15 @@ const MOCK_JOBS = [
   { 
     id: 4, 
     title: 'บาร์เทนเดอร์ (กะพิเศษ 4 ชม.)', 
-    titleEn: 'Bartender (4-Hour Shift)', 
+    titleEn: 'Bartender (4-Hour Shift)',
+    role: 'บาร์เทนเดอร์',
+    roleEn: 'Bartender',
     company: 'Sky Bar at Lebua', 
     type: 'server', 
     distance: '3.5 km', 
-    pay: '฿450', 
+    pay: '฿450',
+    shiftStart: '20:00',
+    shiftEnd: '00:00',
     rating: 4.9, 
     image: 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&q=80',
     description: 'Premium evening shift (8PM-12AM). High tips expected. Perfect for experienced bartenders looking for extra income.',
@@ -245,17 +261,496 @@ const MOCK_JOBS = [
   { 
     id: 5, 
     title: 'พนักงานอีเวนต์', 
-    titleEn: 'Event Staff', 
+    titleEn: 'Event Staff',
+    role: 'พนักงานอีเวนต์',
+    roleEn: 'Event Staff',
     company: 'Siam Paragon Hall', 
     type: 'other', 
     distance: '5.0 km', 
-    pay: '฿220', 
+    pay: '฿220',
+    shiftStart: '09:00',
+    shiftEnd: '17:00',
     rating: 4.0, 
     image: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&q=80',
     description: 'Staff needed for a 3-day exhibition. Checking tickets and guiding guests.',
     descriptionTh: 'ต้องการพนักงานสำหรับงานนิทรรศการ 3 วัน ตรวจตั๋วและแนะนำแขก',
     requirements: ['Good communication', 'Stand for long periods', 'Polite'],
     requirementsTh: ['สื่อสารดี', 'ยืนได้นาน', 'สุภาพ']
+  },
+  { 
+    id: 6, 
+    title: 'บาริสต้า (กะเช้า)', 
+    titleEn: 'Morning Barista',
+    role: 'บาริสต้า',
+    roleEn: 'Barista',
+    company: 'Starbucks - Siam Square', 
+    type: 'server', 
+    distance: '1.5 km', 
+    pay: '฿200',
+    shiftStart: '06:00',
+    shiftEnd: '11:00',
+    rating: 4.6, 
+    image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80',
+    description: 'Early morning shift serving coffee. Great for early risers. Free drinks during shift.',
+    descriptionTh: 'กะเช้าทำกาแฟ เหมาะสำหรับคนตื่นเช้า ได้ดื่มฟรีระหว่างทำงาน',
+    requirements: ['Coffee knowledge', 'Friendly personality', 'Early riser'],
+    requirementsTh: ['มีความรู้เรื่องกาแฟ', 'บุคลิกเป็นมิตร', 'ตื่นเช้าได้']
+  },
+  { 
+    id: 7, 
+    title: 'พนักงานต้อนรับ', 
+    titleEn: 'Restaurant Host',
+    role: 'พนักงานต้อนรับ',
+    roleEn: 'Host/Hostess',
+    company: 'Gaggan Restaurant', 
+    type: 'server', 
+    distance: '2.8 km', 
+    pay: '฿300',
+    shiftStart: '17:30',
+    shiftEnd: '22:30',
+    rating: 4.7, 
+    image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80',
+    description: 'Fine dining host position. Greeting guests and managing reservations.',
+    descriptionTh: 'ตำแหน่งพนักงานต้อนรับร้านอาหารชั้นเลิศ ทักทายลูกค้าและจัดการการจอง',
+    requirements: ['Professional appearance', 'English fluent', 'Organized'],
+    requirementsTh: ['บุคลิกภาพดี', 'ภาษาอังกฤษดี', 'เป็นระเบียบ']
+  },
+  { 
+    id: 8, 
+    title: 'พนักงานส่งอาหาร', 
+    titleEn: 'Food Runner',
+    role: 'พนักงานส่งอาหาร',
+    roleEn: 'Food Runner',
+    company: 'Nahm Restaurant', 
+    type: 'server', 
+    distance: '1.9 km', 
+    pay: '฿230',
+    shiftStart: '18:00',
+    shiftEnd: '23:00',
+    rating: 4.3, 
+    image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80',
+    description: 'Deliver food from kitchen to tables quickly and efficiently.',
+    descriptionTh: 'ส่งอาหารจากครัวไปยังโต๊ะลูกค้าอย่างรวดเร็วและมีประสิทธิภาพ',
+    requirements: ['Fast-paced work', 'Good memory', 'Team player'],
+    requirementsTh: ['ทำงานเร็ว', 'จำดี', 'ทำงานเป็นทีม']
+  },
+  { 
+    id: 9, 
+    title: 'เชฟซูชิ', 
+    titleEn: 'Sushi Chef Helper',
+    role: 'ผู้ช่วยเชฟซูชิ',
+    roleEn: 'Sushi Helper',
+    company: 'Sushi Masato', 
+    type: 'kitchen', 
+    distance: '3.2 km', 
+    pay: '฿350',
+    shiftStart: '16:00',
+    shiftEnd: '21:00',
+    rating: 4.8, 
+    image: 'https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=800&q=80',
+    description: 'Assist sushi chef with prep work. Training provided for motivated candidates.',
+    descriptionTh: 'ช่วยเชฟซูชิเตรียมวัตถุดิบ มีการฝึกสอนให้สำหรับผู้ที่กระตือรือร้น',
+    requirements: ['Detail-oriented', 'Clean habits', 'Willing to learn'],
+    requirementsTh: ['ใส่ใจรายละเอียด', 'สะอาด', 'อยากเรียนรู้']
+  },
+  { 
+    id: 10, 
+    title: 'พนักงานทำความสะอาด', 
+    titleEn: 'Cleaner (Part-Time)',
+    role: 'พนักงานทำความสะอาด',
+    roleEn: 'Cleaner',
+    company: 'Central Embassy', 
+    type: 'other', 
+    distance: '2.1 km', 
+    pay: '฿180',
+    shiftStart: '06:00',
+    shiftEnd: '10:00',
+    rating: 4.1, 
+    image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80',
+    description: 'Early morning cleaning before mall opens. Simple and straightforward work.',
+    descriptionTh: 'ทำความสะอาดเช้าก่อนห้างเปิด งานง่ายและตรงไปตรงมา',
+    requirements: ['Punctual', 'Physical fitness', 'Reliable'],
+    requirementsTh: ['ตรงเวลา', 'แข็งแรง', 'ไว้ใจได้']
+  },
+  { 
+    id: 11, 
+    title: 'พนักงานเค้าเตอร์', 
+    titleEn: 'Cashier',
+    role: 'พนักงานเค้าเตอร์',
+    roleEn: 'Cashier',
+    company: 'After You Dessert Cafe', 
+    type: 'server', 
+    distance: '0.9 km', 
+    pay: '฿210',
+    shiftStart: '14:00',
+    shiftEnd: '19:00',
+    rating: 4.4, 
+    image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80',
+    description: 'Afternoon shift handling payments and orders. Dessert discount for staff!',
+    descriptionTh: 'กะบ่ายรับเงินและรับออเดอร์ พนักงานได้ส่วนลดขนม!',
+    requirements: ['Basic math', 'Friendly', 'POS experience preferred'],
+    requirementsTh: ['คิดเลขเป็น', 'ยิ้มแย้ม', 'มีประสบการณ์จะดี']
+  },
+  { 
+    id: 12, 
+    title: 'พนักงานจัดเตรียมอาหาร', 
+    titleEn: 'Food Prep Staff',
+    role: 'พนักงานเตรียมอาหาร',
+    roleEn: 'Prep Cook',
+    company: 'Pizza Company', 
+    type: 'kitchen', 
+    distance: '1.7 km', 
+    pay: '฿195',
+    shiftStart: '10:00',
+    shiftEnd: '15:00',
+    rating: 4.2, 
+    image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&q=80',
+    description: 'Prepare pizza toppings and ingredients for lunch rush. Training provided.',
+    descriptionTh: 'เตรียมท็อปปิ้งพิซซ่าและวัตถุดิบสำหรับช่วงเที่ยง มีการอบรม',
+    requirements: ['Food safety knowledge', 'Fast learner', 'Team player'],
+    requirementsTh: ['รู้เรื่องสุขอนามัย', 'เรียนรู้เร็ว', 'ทำงานเป็นทีม']
+  },
+  { 
+    id: 13, 
+    title: 'พนักงานบาร์', 
+    titleEn: 'Bar Back',
+    role: 'ผู้ช่วยบาร์เทนเดอร์',
+    roleEn: 'Bar Back',
+    company: 'The Iron Fairies', 
+    type: 'server', 
+    distance: '3.8 km', 
+    pay: '฿280',
+    shiftStart: '19:00',
+    shiftEnd: '01:00',
+    rating: 4.5, 
+    image: 'https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=800&q=80',
+    description: 'Support bartender by restocking and cleaning. Great tips potential.',
+    descriptionTh: 'ช่วยบาร์เทนเดอร์เติมของและทำความสะอาด โอกาสได้ทิปดี',
+    requirements: ['Night shift OK', 'Energetic', '21+ years old'],
+    requirementsTh: ['ทำงานกลางคืนได้', 'กระฉับกระเฉง', 'อายุ 21 ขึ้นไป']
+  },
+  { 
+    id: 14, 
+    title: 'พนักงานเสิร์ฟอาหารว่าง', 
+    titleEn: 'Snack Bar Server',
+    role: 'พนักงานเสิร์ฟ',
+    roleEn: 'Server',
+    company: 'SF Cinema - MBK', 
+    type: 'server', 
+    distance: '2.3 km', 
+    pay: '฿190',
+    shiftStart: '13:00',
+    shiftEnd: '18:00',
+    rating: 4.0, 
+    image: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&q=80',
+    description: 'Serve popcorn and drinks at cinema. Free movie tickets for staff!',
+    descriptionTh: 'เสิร์ฟป๊อปคอร์นและเครื่องดื่มในโรงหนัง พนักงานดูหนังฟรี!',
+    requirements: ['Customer service', 'Weekends available', 'Friendly'],
+    requirementsTh: ['บริการดี', 'ทำวันหยุดได้', 'เป็นมิตร']
+  },
+  { 
+    id: 15, 
+    title: 'พนักงานทำเบเกอรี่', 
+    titleEn: 'Bakery Assistant',
+    role: 'ผู้ช่วยเบเกอรี่',
+    roleEn: 'Baker Helper',
+    company: 'Bake a Wish', 
+    type: 'kitchen', 
+    distance: '1.3 km', 
+    pay: '฿240',
+    shiftStart: '05:00',
+    shiftEnd: '11:00',
+    rating: 4.6, 
+    image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=80',
+    description: 'Early morning baking assistant. Learn professional baking skills.',
+    descriptionTh: 'ช่วยทำเบเกอรี่เช้าตรู่ เรียนรู้ฝีมือทำขนมแบบมืออาชีพ',
+    requirements: ['Early morning', 'Following recipes', 'Clean workspace'],
+    requirementsTh: ['ตื่นเช้าได้', 'ทำตามสูตร', 'เก็บที่ทำงานสะอาด']
+  },
+  { 
+    id: 16, 
+    title: 'พนักงานดูแลโต๊ะ', 
+    titleEn: 'Busser',
+    role: 'พนักงานเก็บโต๊ะ',
+    roleEn: 'Busser',
+    company: 'The Commons Saladaeng', 
+    type: 'server', 
+    distance: '2.6 km', 
+    pay: '฿175',
+    shiftStart: '11:30',
+    shiftEnd: '16:00',
+    rating: 4.1, 
+    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80',
+    description: 'Clear and set tables during lunch rush. Entry-level position.',
+    descriptionTh: 'เก็บและจัดโต๊ะช่วงมื้อเที่ยง งานเริ่มต้นสำหรับมือใหม่',
+    requirements: ['Physical work', 'Quick pace', 'Reliable'],
+    requirementsTh: ['ใช้แรงงาน', 'ทำงานเร็ว', 'ไว้ใจได้']
+  },
+  { 
+    id: 17, 
+    title: 'พนักงานส่งเดลิเวอรี่', 
+    titleEn: 'Delivery Driver',
+    role: 'พนักงานส่งของ',
+    roleEn: 'Delivery Driver',
+    company: 'Food Panda Hub', 
+    type: 'other', 
+    distance: '1.1 km', 
+    pay: '฿60',
+    shiftStart: '11:00',
+    shiftEnd: '14:00',
+    rating: 4.3, 
+    image: 'https://images.unsplash.com/photo-1526367790999-0150786686a2?w=800&q=80',
+    description: 'Lunch time food delivery. Own motorcycle required. Per delivery payment.',
+    descriptionTh: 'ส่งอาหารช่วงมื้อเที่ยง ต้องมีรถมอเตอร์ไซค์เป็นของตัวเอง จ่ายต่อเที่ยว',
+    requirements: ['Own motorcycle', 'Driving license', 'GPS navigation'],
+    requirementsTh: ['มีมอเตอร์ไซค์', 'ใบขับขี่', 'ใช้แผนที่ได้']
+  },
+  { 
+    id: 18, 
+    title: 'พนักงานทำเครื่องดื่ม', 
+    titleEn: 'Drink Maker',
+    role: 'พนักงานทำเครื่องดื่ม',
+    roleEn: 'Beverage Staff',
+    company: 'Cha Tra Mue', 
+    type: 'server', 
+    distance: '1.6 km', 
+    pay: '฿205',
+    shiftStart: '10:00',
+    shiftEnd: '16:00',
+    rating: 4.4, 
+    image: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=800&q=80',
+    description: 'Make Thai tea and beverages. Recipe training provided.',
+    descriptionTh: 'ทำชาไทยและเครื่องดื่ม มีการสอนสูตร',
+    requirements: ['Quick learner', 'Neat appearance', 'Customer friendly'],
+    requirementsTh: ['เรียนรู้เร็ว', 'แต่งตัวเรียบร้อย', 'บริการดี']
+  },
+  { 
+    id: 19, 
+    title: 'พนักงานจัดโต๊ะบุฟเฟต์', 
+    titleEn: 'Buffet Attendant',
+    role: 'พนักงานบุฟเฟต์',
+    roleEn: 'Buffet Staff',
+    company: 'Novotel Bangkok', 
+    type: 'server', 
+    distance: '4.2 km', 
+    pay: '฿260',
+    shiftStart: '06:30',
+    shiftEnd: '11:00',
+    rating: 4.5, 
+    image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80',
+    description: 'Morning breakfast buffet service. Maintain food stations and cleanliness.',
+    descriptionTh: 'เสิร์ฟบุฟเฟต์เช้า ดูแลจุดอาหารและความสะอาด',
+    requirements: ['Morning person', 'Organized', 'Hotel experience preferred'],
+    requirementsTh: ['ตื่นเช้าได้', 'เป็นระเบียบ', 'มีประสบการณ์โรงแรมจะดี']
+  },
+  { 
+    id: 20, 
+    title: 'พนักงานครัวอิตาเลียน', 
+    titleEn: 'Italian Kitchen Helper',
+    role: 'ผู้ช่วยครัว',
+    roleEn: 'Kitchen Helper',
+    company: 'La Scala Restaurant', 
+    type: 'kitchen', 
+    distance: '3.1 km', 
+    pay: '฿270',
+    shiftStart: '16:00',
+    shiftEnd: '22:00',
+    rating: 4.7, 
+    image: 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=800&q=80',
+    description: 'Assist in Italian kitchen. Learn authentic recipes from Italian chef.',
+    descriptionTh: 'ช่วยงานครัวอิตาเลียน เรียนรู้สูตรแท้จากเชฟอิตาเลียน',
+    requirements: ['Pasta knowledge', 'Clean habits', 'Kitchen safety'],
+    requirementsTh: ['รู้จักพาสต้า', 'สะอาด', 'ใส่ใจความปลอดภัย']
+  },
+  { 
+    id: 21, 
+    title: 'พนักงานบาร์น้ำผลไม้', 
+    titleEn: 'Juice Bar Staff',
+    role: 'พนักงานบาร์',
+    roleEn: 'Juice Maker',
+    company: 'Boost Juice - Siam Center', 
+    type: 'server', 
+    distance: '1.8 km', 
+    pay: '฿195',
+    shiftStart: '12:00',
+    shiftEnd: '18:00',
+    rating: 4.2, 
+    image: 'https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=800&q=80',
+    description: 'Make fresh juices and smoothies. Fun, energetic environment.',
+    descriptionTh: 'ทำน้ำผลไม้และสมูทตี้ บรรยากาศสนุกสนาน',
+    requirements: ['Energetic', 'Blender skills', 'Smile'],
+    requirementsTh: ['กระตือรือร้น', 'ปั่นเป็น', 'ยิ้มแย้ม']
+  },
+  { 
+    id: 22, 
+    title: 'พนักงานล้างครัว', 
+    titleEn: 'Kitchen Porter',
+    role: 'พนักงานทำความสะอาดครัว',
+    roleEn: 'Kitchen Porter',
+    company: 'Mandarin Oriental', 
+    type: 'kitchen', 
+    distance: '5.5 km', 
+    pay: '฿320',
+    shiftStart: '14:00',
+    shiftEnd: '22:00',
+    rating: 4.4, 
+    image: 'https://images.unsplash.com/photo-1556910096-6f5e72db6803?w=800&q=80',
+    description: '5-star hotel kitchen. Good pay and working conditions.',
+    descriptionTh: 'ครัวโรงแรม 5 ดาว ค่าแรงดีและสภาพการทำงานดี',
+    requirements: ['Physical stamina', 'Team work', 'Hygiene conscious'],
+    requirementsTh: ['แข็งแรง', 'ทำงานเป็นทีม', 'ใส่ใจสุขอนามัย']
+  },
+  { 
+    id: 23, 
+    title: 'พนักงานแคชเชียร์ร้านอาหาร', 
+    titleEn: 'Restaurant Cashier',
+    role: 'แคชเชียร์',
+    roleEn: 'Cashier',
+    company: 'Fuji Restaurant', 
+    type: 'server', 
+    distance: '2.0 km', 
+    pay: '฿215',
+    shiftStart: '11:00',
+    shiftEnd: '15:30',
+    rating: 4.3, 
+    image: 'https://images.unsplash.com/photo-1567521464027-f127ff144326?w=800&q=80',
+    description: 'Handle payments for lunch service. Japanese restaurant experience.',
+    descriptionTh: 'รับเงินช่วงมื้อเที่ยง ประสบการณ์ร้านอาหารญี่ปุ่น',
+    requirements: ['Cash handling', 'Basic Japanese preferred', 'Polite'],
+    requirementsTh: ['จัดการเงิน', 'พูดญี่ปุ่นเบื้องต้นจะดี', 'สุภาพ']
+  },
+  { 
+    id: 24, 
+    title: 'พนักงานห้องเย็น', 
+    titleEn: 'Cold Kitchen Staff',
+    role: 'พนักงานครัวเย็น',
+    roleEn: 'Cold Kitchen',
+    company: 'Grand Hyatt Erawan', 
+    type: 'kitchen', 
+    distance: '3.7 km', 
+    pay: '฿310',
+    shiftStart: '07:00',
+    shiftEnd: '15:00',
+    rating: 4.8, 
+    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80',
+    description: 'Prepare salads and cold dishes. No cooking involved, perfect for beginners.',
+    descriptionTh: 'เตรียมสลัดและอาหารเย็น ไม่ต้องปรุง เหมาะมือใหม่',
+    requirements: ['Cleanliness', 'Knife skills basic', 'Organized'],
+    requirementsTh: ['รักความสะอาด', 'ใช้มีดเป็น', 'เป็นระเบียบ']
+  },
+  { 
+    id: 25, 
+    title: 'พนักงานไวน์บาร์', 
+    titleEn: 'Wine Bar Server',
+    role: 'พนักงานเสิร์ฟไวน์',
+    roleEn: 'Wine Server',
+    company: 'Wine Connection', 
+    type: 'server', 
+    distance: '2.9 km', 
+    pay: '฿285',
+    shiftStart: '18:00',
+    shiftEnd: '23:00',
+    rating: 4.6, 
+    image: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=80',
+    description: 'Serve wine and appetizers. Wine knowledge training provided.',
+    descriptionTh: 'เสิร์ฟไวน์และอาหารว่าง มีการอบรมความรู้เรื่องไวน์',
+    requirements: ['21+ years old', 'Professional', 'Wine interest'],
+    requirementsTh: ['อายุ 21 ขึ้นไป', 'มืออาชีพ', 'สนใจไวน์']
+  },
+  { 
+    id: 26, 
+    title: 'พนักงานเตรียมวัตถุดิบ', 
+    titleEn: 'Prep Cook Morning',
+    role: 'พนักงานเตรียมวัตถุดิบ',
+    roleEn: 'Prep Cook',
+    company: 'Cafe Tartine', 
+    type: 'kitchen', 
+    distance: '1.4 km', 
+    pay: '฿225',
+    shiftStart: '06:00',
+    shiftEnd: '12:00',
+    rating: 4.5, 
+    image: 'https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=800&q=80',
+    description: 'Early morning prep for lunch service. Cut vegetables and prepare ingredients.',
+    descriptionTh: 'เตรียมวัตถุดิบเช้าสำหรับมื้อเที่ยง หั่นผักและเตรียมส่วนผสม',
+    requirements: ['Early start', 'Knife skills', 'Follow instructions'],
+    requirementsTh: ['เริ่มเช้า', 'ใช้มีดเป็น', 'ทำตามคำสั่ง']
+  },
+  { 
+    id: 27, 
+    title: 'พนักงานรับออเดอร์', 
+    titleEn: 'Order Taker',
+    role: 'พนักงานรับออเดอร์',
+    roleEn: 'Order Taker',
+    company: 'McDonald\'s - Asoke', 
+    type: 'server', 
+    distance: '2.2 km', 
+    pay: '฿185',
+    shiftStart: '07:00',
+    shiftEnd: '12:00',
+    rating: 4.1, 
+    image: 'https://images.unsplash.com/photo-1619454016518-697bc231e7cb?w=800&q=80',
+    description: 'Breakfast shift taking orders. Fast-paced environment, comprehensive training.',
+    descriptionTh: 'กะเช้ารับออเดอร์ จังหวะการทำงานเร็ว มีการฝึกอบรมครบถ้วน',
+    requirements: ['Customer service', 'Fast learner', 'Stamina'],
+    requirementsTh: ['บริการลูกค้า', 'เรียนรู้เร็ว', 'ทนทาน']
+  },
+  { 
+    id: 28, 
+    title: 'พนักงานจัดโต๊ะงานเลี้ยง', 
+    titleEn: 'Banquet Setup Staff',
+    role: 'พนักงานจัดงาน',
+    roleEn: 'Banquet Staff',
+    company: 'Centara Grand Hotel', 
+    type: 'other', 
+    distance: '4.8 km', 
+    pay: '฿245',
+    shiftStart: '15:00',
+    shiftEnd: '23:00',
+    rating: 4.3, 
+    image: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&q=80',
+    description: 'Set up tables and chairs for events. Evening shifts, occasional weekends.',
+    descriptionTh: 'จัดโต๊ะเก้าอี้สำหรับงานอีเวนต์ กะเย็น บางครั้งวันหยุด',
+    requirements: ['Physical work', 'Team player', 'Flexible schedule'],
+    requirementsTh: ['ใช้แรงงาน', 'ทำงานเป็นทีม', 'ตารางยืดหยุ่น']
+  },
+  { 
+    id: 29, 
+    title: 'พนักงานทอดไก่', 
+    titleEn: 'Fried Chicken Cook',
+    role: 'พนักงานครัว',
+    roleEn: 'Cook',
+    company: 'KFC - Ratchada', 
+    type: 'kitchen', 
+    distance: '3.4 km', 
+    pay: '฿200',
+    shiftStart: '16:00',
+    shiftEnd: '21:00',
+    rating: 4.2, 
+    image: 'https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=800&q=80',
+    description: 'Evening shift frying chicken. Full training provided, uniform included.',
+    descriptionTh: 'กะเย็นทอดไก่ มีการอบรมเต็มรูปแบบ รวมเครื่องแบบ',
+    requirements: ['Handle hot oil', 'Fast pace', 'Team work'],
+    requirementsTh: ['จัดการน้ำมันร้อน', 'ทำงานเร็ว', 'ทำงานเป็นทีม']
+  },
+  { 
+    id: 30, 
+    title: 'พนักงานคลังอาหาร', 
+    titleEn: 'Food Storage Staff',
+    role: 'พนักงานคลัง',
+    roleEn: 'Storage Staff',
+    company: 'Tesco Lotus Distribution', 
+    type: 'other', 
+    distance: '6.2 km', 
+    pay: '฿205',
+    shiftStart: '08:00',
+    shiftEnd: '16:00',
+    rating: 4.0, 
+    image: 'https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&q=80',
+    description: 'Organize and manage food storage. Check expiry dates and stock levels.',
+    descriptionTh: 'จัดเก็บและจัดการคลังอาหาร ตรวจวันหมดอายุและสต็อก',
+    requirements: ['Organized', 'Inventory knowledge', 'Physical work'],
+    requirementsTh: ['เป็นระเบียบ', 'รู้เรื่องสต็อก', 'ใช้แรงงาน']
   },
 ];
 
@@ -425,6 +920,117 @@ const AdvancedFiltersModal = ({ isOpen, onClose, filters, onFilterChange, lang, 
   );
 };
 
+// Location Picker Modal Component
+const LocationPickerModal = ({ isOpen, onClose, location, setLocation, lang }) => {
+  if (!isOpen) return null;
+
+  const popularLocations = [
+    { th: 'กรุงเทพมหานคร', en: 'Bangkok, Thailand' },
+    { th: 'สยาม', en: 'Siam' },
+    { th: 'สุขุมวิท', en: 'Sukhumvit' },
+    { th: 'สีลม', en: 'Silom' },
+    { th: 'อารีย์', en: 'Ari' },
+    { th: 'ทองหล่อ', en: 'Thong Lo' },
+    { th: 'เอกมัย', en: 'Ekkamai' },
+    { th: 'อโศก', en: 'Asok' },
+  ];
+
+  const handleUseCurrentLocation = () => {
+    setLocation(lang === 'th' ? 'ตำแหน่งปัจจุบัน' : 'Current Location');
+    onClose();
+  };
+
+  const handleSelectLocation = (loc) => {
+    setLocation(lang === 'th' ? loc.th : loc.en);
+    onClose();
+  };
+
+  return (
+    <div className="fixed inset-0 bg-black/50 z-50 flex items-end sm:items-center justify-center animate-fadeIn" onClick={onClose}>
+      <div className="bg-white w-full sm:max-w-lg sm:rounded-3xl rounded-t-3xl max-h-[90vh] overflow-hidden flex flex-col animate-slideUp" onClick={(e) => e.stopPropagation()}>
+        {/* Header */}
+        <div className="sticky top-0 bg-white border-b border-gray-100 px-6 py-4 flex items-center justify-between z-10">
+          <h2 className="text-xl font-bold text-gray-900">{lang === 'th' ? 'เลือกสถานที่' : 'Select Location'}</h2>
+          <button onClick={onClose} className="p-2 hover:bg-gray-100 rounded-full transition-colors">
+            <X size={24} className="text-gray-500" />
+          </button>
+        </div>
+
+        {/* Dummy Map */}
+        <div className="relative h-64 bg-gray-100 border-b border-gray-200">
+          {/* Grid Pattern Background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-gray-100" style={{
+            backgroundImage: `
+              linear-gradient(rgba(220, 38, 38, 0.03) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(220, 38, 38, 0.03) 1px, transparent 1px)
+            `,
+            backgroundSize: '20px 20px'
+          }}>
+            {/* Decorative Roads */}
+            <div className="absolute top-1/3 left-0 right-0 h-2 bg-gray-300/50"></div>
+            <div className="absolute top-0 bottom-0 left-1/2 w-2 bg-gray-300/50"></div>
+            
+            {/* Current Location Pin */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+              <div className="bg-blue-500 p-4 rounded-full shadow-2xl animate-pulse">
+                <MapPin size={32} className="text-white" fill="white" />
+              </div>
+              <div className="mt-2 bg-white px-4 py-2 rounded-xl shadow-lg border-2 border-blue-200">
+                <span className="text-sm font-bold text-blue-600">{lang === 'th' ? 'คุณอยู่ที่นี่' : 'You are here'}</span>
+              </div>
+            </div>
+
+            {/* Radius Circle */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 border-4 border-blue-300/30 rounded-full animate-pulse"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 border-4 border-blue-400/40 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+          </div>
+
+          {/* Current Location Button */}
+          <button 
+            onClick={handleUseCurrentLocation}
+            className="absolute bottom-4 right-4 bg-white shadow-lg px-4 py-3 rounded-xl border border-gray-200 flex items-center gap-2 hover:bg-blue-50 transition-all active:scale-95"
+          >
+            <div className="bg-blue-500 p-1.5 rounded-lg">
+              <MapPin size={18} className="text-white" />
+            </div>
+            <span className="text-sm font-bold text-gray-900">{lang === 'th' ? 'ใช้ตำแหน่งปัจจุบัน' : 'Use Current Location'}</span>
+          </button>
+        </div>
+
+        {/* Popular Locations */}
+        <div className="flex-1 overflow-y-auto p-6">
+          <h3 className="text-sm font-bold text-gray-500 mb-3 uppercase tracking-wide">{lang === 'th' ? 'สถานที่ยอดนิยม' : 'Popular Locations'}</h3>
+          <div className="space-y-2">
+            {popularLocations.map((loc, idx) => (
+              <button
+                key={idx}
+                onClick={() => handleSelectLocation(loc)}
+                className={`w-full flex items-center gap-3 p-4 rounded-xl border transition-all hover:border-red-200 hover:bg-red-50 active:scale-95 ${
+                  location === (lang === 'th' ? loc.th : loc.en)
+                    ? 'bg-red-50 border-red-200'
+                    : 'bg-white border-gray-200'
+                }`}
+              >
+                <div className={`p-2 rounded-lg ${
+                  location === (lang === 'th' ? loc.th : loc.en)
+                    ? 'bg-red-600'
+                    : 'bg-gray-100'
+                }`}>
+                  <MapPin size={20} className={location === (lang === 'th' ? loc.th : loc.en) ? 'text-white' : 'text-gray-600'} />
+                </div>
+                <span className="font-semibold text-gray-900">{lang === 'th' ? loc.th : loc.en}</span>
+                {location === (lang === 'th' ? loc.th : loc.en) && (
+                  <CheckCircle size={20} className="text-red-600 ml-auto" />
+                )}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const DatePickerStrip = ({ selectedDate, onSelect, lang, t }) => {
   const scrollRef = useRef(null);
   const dates = [];
@@ -491,6 +1097,12 @@ const JobCard = ({ job, isSaved, onToggleSave, onClick, lang, t }) => (
     <div className="flex gap-3">
       <div className="w-20 h-20 rounded-xl bg-gradient-to-br from-gray-100 to-gray-50 overflow-hidden flex-shrink-0 relative">
         <img src={job.image} alt={job.company} className="w-full h-full object-cover" />
+        {/* Role Badge on Image */}
+        <div className="absolute bottom-1 left-1 right-1 bg-gradient-to-r from-gray-900/90 to-gray-800/90 backdrop-blur-sm rounded-md px-1.5 py-0.5">
+          <span className="text-white text-[9px] font-bold truncate block">
+            {lang === 'th' ? job.role : job.roleEn}
+          </span>
+        </div>
       </div>
       
       <div className="flex-1 flex flex-col justify-between min-w-0">
@@ -510,22 +1122,38 @@ const JobCard = ({ job, isSaved, onToggleSave, onClick, lang, t }) => (
             </button>
           </div>
           
-          <p className="text-gray-500 text-xs mb-1.5 line-clamp-1 font-medium">{job.company}</p>
+          <p className="text-gray-500 text-xs mb-2 line-clamp-1 font-medium">{job.company}</p>
           
+          {/* Shift Time and Role Badges */}
+          <div className="flex items-center gap-2 mb-1.5 flex-wrap">
+            <div className="bg-red-50 border border-red-100 rounded-lg px-2 py-1 inline-flex items-center gap-1">
+              <Clock size={12} className="text-red-600" />
+              <span className="text-xs font-bold text-red-700">
+                {job.shiftStart} - {job.shiftEnd}
+              </span>
+            </div>
+            <div className="bg-blue-50 border border-blue-100 rounded-lg px-2 py-1 inline-flex items-center gap-1">
+              <Briefcase size={12} className="text-blue-600" />
+              <span className="text-xs font-bold text-blue-700">
+                {lang === 'th' ? job.role : job.roleEn}
+              </span>
+            </div>
+          </div>
+
           <div className="flex items-center gap-2 text-xs text-gray-500">
-            <span className="flex items-center">
-              <Clock size={11} className="mr-1 text-gray-400" />
-              ทำ 1 วัน
-            </span>
-            <span className="text-gray-300">•</span>
             <span className="flex items-center">
               <MapPin size={11} className="mr-1 text-red-600" />
               {job.distance}
             </span>
+            <span className="text-gray-300">•</span>
+            <span className="flex items-center">
+              <Star size={11} className="mr-1 text-yellow-500 fill-yellow-500" />
+              {job.rating}
+            </span>
           </div>
         </div>
         
-        <div className="flex items-center justify-between mt-1">
+        <div className="flex items-center justify-between mt-2">
           <span className="text-xl font-bold text-gray-900">
             {job.pay}<span className="text-xs font-medium text-gray-400">/ชม.</span>
           </span>
@@ -569,6 +1197,13 @@ const JobDetailView = ({ job, isSaved, onToggleSave, onApply, onBack, lang, t })
 
         {/* Title Block Over Image */}
         <div className="absolute bottom-0 left-0 w-full p-6 pb-8 text-white">
+          {/* Role Badge */}
+          <div className="mb-3">
+            <span className="bg-blue-600 text-white text-sm font-bold px-4 py-1.5 rounded-full shadow-lg inline-flex items-center gap-2">
+              <Briefcase size={16} />
+              {lang === 'th' ? job.role : job.roleEn}
+            </span>
+          </div>
           <h1 className="font-display text-4xl font-extrabold mb-2 text-shadow-md">{lang === 'th' ? job.title : job.titleEn}</h1>
           <p className="text-xl font-semibold text-white/90 text-shadow-sm">{job.company}</p>
         </div>
@@ -576,58 +1211,214 @@ const JobDetailView = ({ job, isSaved, onToggleSave, onApply, onBack, lang, t })
 
       {/* Scrollable Content */}
       <div className="flex-1 px-6 py-8 -mt-8 bg-white rounded-t-4xl relative z-10 shadow-soft-lg">
-        {/* Meta Tags */}
-        <div className="flex flex-wrap gap-2.5 mb-8">
-          <div className="flex items-center text-sm font-bold text-gray-700 bg-orange-50 border border-orange-200 px-4 py-2 rounded-2xl">
-            <MapPin size={16} className="mr-2 text-primary-500" /> {job.distance}
+        {/* Role Info Bar */}
+        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 rounded-2xl p-4 mb-6 flex items-center justify-between shadow-sm">
+          <div className="flex items-center gap-3">
+            <div className="bg-blue-600 p-3 rounded-xl">
+              <Briefcase size={24} className="text-white" />
+            </div>
+            <div>
+              <p className="text-xs font-medium text-gray-500 mb-0.5">{lang === 'th' ? 'ตำแหน่งงาน' : 'Position'}</p>
+              <p className="text-lg font-bold text-gray-900">{lang === 'th' ? job.role : job.roleEn}</p>
+            </div>
           </div>
-          <div className="flex items-center text-sm font-bold text-gray-700 bg-yellow-50 border border-yellow-200 px-4 py-2 rounded-2xl">
-            <Star size={16} className="mr-2 text-yellow-500 fill-yellow-500" /> {job.rating}
-          </div>
-          <div className="flex items-center text-sm font-bold text-gray-700 bg-blue-50 border border-blue-200 px-4 py-2 rounded-2xl">
-             <Clock size={16} className="mr-2 text-blue-500" /> {lang === 'th' ? 'งานชั่วคราว' : 'Part-time'}
+          <div className="text-right">
+            <p className="text-xs font-medium text-gray-500 mb-0.5">{lang === 'th' ? 'ประเภท' : 'Type'}</p>
+            <p className="text-sm font-bold text-blue-600">{lang === 'th' ? 'งานชั่วคราว' : 'Part-time'}</p>
           </div>
         </div>
 
-        <div className="space-y-8 pb-32">
+        {/* Enhanced Info Cards Grid */}
+        <div className="grid grid-cols-3 gap-3 mb-6">
+          {/* Distance Card */}
+          <div className="bg-gradient-to-br from-red-50 to-orange-50 border border-red-100 rounded-2xl p-4 flex flex-col items-center justify-center shadow-sm">
+            <MapPin size={24} className="text-red-600 mb-2" />
+            <span className="text-xs font-medium text-gray-500 mb-1">{lang === 'th' ? 'ระยะทาง' : 'Distance'}</span>
+            <span className="text-base font-bold text-gray-900">{job.distance}</span>
+          </div>
+
+          {/* Rating Card */}
+          <div className="bg-gradient-to-br from-yellow-50 to-amber-50 border border-yellow-100 rounded-2xl p-4 flex flex-col items-center justify-center shadow-sm">
+            <Star size={24} className="text-yellow-500 fill-yellow-500 mb-2" />
+            <span className="text-xs font-medium text-gray-500 mb-1">{lang === 'th' ? 'คะแนน' : 'Rating'}</span>
+            <span className="text-base font-bold text-gray-900">{job.rating}</span>
+          </div>
+
+          {/* Duration Card */}
+          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-100 rounded-2xl p-4 flex flex-col items-center justify-center shadow-sm">
+            <Clock size={24} className="text-blue-600 mb-2" />
+            <span className="text-xs font-medium text-gray-500 mb-1">{lang === 'th' ? 'ระยะเวลา' : 'Duration'}</span>
+            <span className="text-base font-bold text-gray-900">{lang === 'th' ? '1 วัน' : '1 Day'}</span>
+          </div>
+        </div>
+
+        {/* Quick Details Row */}
+        <div className="grid grid-cols-2 gap-3 mb-6">
+          {/* Shift Time Card */}
+          <div className="bg-white border border-gray-200 rounded-xl p-4 flex items-center gap-3 shadow-sm">
+            <div className="bg-red-50 p-2.5 rounded-lg">
+              <Clock size={20} className="text-red-600" />
+            </div>
+            <div>
+              <p className="text-xs font-medium text-gray-500">{lang === 'th' ? 'กะงาน' : 'Shift Time'}</p>
+              <p className="text-sm font-bold text-gray-900">{job.shiftStart} - {job.shiftEnd}</p>
+            </div>
+          </div>
+
+          {/* Pay Rate Card */}
+          <div className="bg-white border border-gray-200 rounded-xl p-4 flex items-center gap-3 shadow-sm">
+            <div className="bg-green-50 p-2.5 rounded-lg">
+              <CreditCard size={20} className="text-green-600" />
+            </div>
+            <div>
+              <p className="text-xs font-medium text-gray-500">{lang === 'th' ? 'ค่าจ้าง' : 'Pay Rate'}</p>
+              <p className="text-sm font-bold text-gray-900">{job.pay}/{lang === 'th' ? 'ชม.' : 'hr'}</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="space-y-6 pb-32">
+          {/* Employer Info Card */}
+          <section className="bg-gradient-to-br from-red-50 to-orange-50 border border-red-100 rounded-2xl p-5 shadow-sm">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-16 h-16 rounded-xl bg-white border-2 border-red-200 overflow-hidden flex-shrink-0 shadow-sm">
+                <img src={job.image} alt={job.company} className="w-full h-full object-cover" />
+              </div>
+              <div className="flex-1">
+                <h3 className="font-bold text-lg text-gray-900 mb-1">{job.company}</h3>
+                <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-1">
+                    <Star size={14} className="text-yellow-500 fill-yellow-500" />
+                    <span className="text-sm font-bold text-gray-700">{job.rating}</span>
+                  </div>
+                  <span className="text-gray-400">•</span>
+                  <span className="text-xs font-medium text-gray-600">{lang === 'th' ? '245 รีวิว' : '245 reviews'}</span>
+                </div>
+              </div>
+            </div>
+            <div className="flex gap-2">
+              <button className="flex-1 bg-white border border-red-200 text-red-600 py-2.5 rounded-xl text-sm font-bold hover:bg-red-50 transition-colors flex items-center justify-center gap-2">
+                <MessageCircle size={16} />
+                {lang === 'th' ? 'ส่งข้อความ' : 'Message'}
+              </button>
+              <button className="flex-1 bg-red-600 text-white py-2.5 rounded-xl text-sm font-bold hover:bg-red-700 transition-colors flex items-center justify-center gap-2">
+                <Info size={16} />
+                {lang === 'th' ? 'ดูโปรไฟล์' : 'View Profile'}
+              </button>
+            </div>
+          </section>
+
           {/* About */}
-          <section className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-3xl border border-gray-100">
-            <h3 className="font-display text-xl font-bold text-gray-900 mb-4 flex items-center">
-              <div className="w-1 h-6 bg-gradient-to-b from-primary-500 to-accent-500 rounded-full mr-3"></div>
+          <section className="bg-white border border-gray-200 p-5 rounded-2xl shadow-sm">
+            <h3 className="font-display text-lg font-bold text-gray-900 mb-3 flex items-center">
+              <div className="w-1 h-5 bg-gradient-to-b from-red-600 to-red-700 rounded-full mr-3"></div>
               {t.details.about}
             </h3>
-            <p className="text-gray-600 leading-relaxed text-base">
+            <p className="text-gray-700 leading-relaxed text-sm">
               {lang === 'th' ? job.descriptionTh : job.description}
             </p>
           </section>
 
           {/* Requirements */}
-          <section className="bg-gradient-to-br from-primary-50/30 to-white p-6 rounded-3xl border border-primary-100">
-            <h3 className="font-display text-xl font-bold text-gray-900 mb-4 flex items-center">
-              <div className="w-1 h-6 bg-gradient-to-b from-primary-500 to-accent-500 rounded-full mr-3"></div>
+          <section className="bg-white border border-gray-200 p-5 rounded-2xl shadow-sm">
+            <h3 className="font-display text-lg font-bold text-gray-900 mb-4 flex items-center">
+              <div className="w-1 h-5 bg-gradient-to-b from-green-600 to-emerald-600 rounded-full mr-3"></div>
               {t.details.requirements}
             </h3>
-            <ul className="space-y-3.5">
+            <ul className="space-y-3">
               {(lang === 'th' ? job.requirementsTh : job.requirements).map((req, i) => (
-                <li key={i} className="flex items-start text-gray-700 font-medium">
-                  <div className="bg-gradient-to-br from-success-500 to-success-600 p-1.5 rounded-full mr-3 mt-0.5 shadow-sm">
-                    <CheckCircle size={14} className="text-white" />
+                <li key={i} className="flex items-start text-gray-700 text-sm">
+                  <div className="bg-green-100 p-1 rounded-lg mr-3 mt-0.5 flex-shrink-0">
+                    <CheckCircle size={16} className="text-green-600" />
                   </div>
-                  {req}
+                  <span className="leading-relaxed">{req}</span>
                 </li>
               ))}
             </ul>
           </section>
 
-          {/* Map Placeholder */}
+          {/* Enhanced Map Section */}
           <section>
-            <h3 className="font-display text-xl font-bold text-gray-900 mb-4 flex items-center">
-              <div className="w-1 h-6 bg-gradient-to-b from-primary-500 to-accent-500 rounded-full mr-3"></div>
-              Location
+            <h3 className="font-display text-lg font-bold text-gray-900 mb-4 flex items-center">
+              <div className="w-1 h-5 bg-gradient-to-b from-red-600 to-red-700 rounded-full mr-3"></div>
+              {lang === 'th' ? 'สถานที่ตั้ง' : 'Location'}
             </h3>
-            <div className="w-full h-48 bg-gradient-to-br from-gray-100 to-gray-50 rounded-3xl flex flex-col items-center justify-center text-gray-400 font-medium border border-gray-200 shadow-inner-soft">
-              <MapPin size={40} className="mb-3 text-primary-400" />
-              <span className="text-sm">Map View Coming Soon</span>
+            
+            {/* Map Container with Dummy Map */}
+            <div className="w-full h-64 bg-gray-100 rounded-2xl overflow-hidden border border-gray-200 shadow-lg relative">
+              {/* Dummy Map Background - Grid Pattern */}
+              <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-gray-100" style={{
+                backgroundImage: `
+                  linear-gradient(rgba(220, 38, 38, 0.03) 1px, transparent 1px),
+                  linear-gradient(90deg, rgba(220, 38, 38, 0.03) 1px, transparent 1px)
+                `,
+                backgroundSize: '20px 20px'
+              }}>
+                {/* Decorative Roads */}
+                <div className="absolute top-1/3 left-0 right-0 h-2 bg-gray-300/50"></div>
+                <div className="absolute top-0 bottom-0 left-1/2 w-2 bg-gray-300/50"></div>
+                
+                {/* Location Pin - Your Location */}
+                <div className="absolute bottom-1/3 right-1/3 flex flex-col items-center">
+                  <div className="bg-blue-500 p-2 rounded-full shadow-lg animate-pulse">
+                    <div className="w-3 h-3 bg-white rounded-full"></div>
+                  </div>
+                  <div className="mt-1 bg-white px-2 py-1 rounded-lg shadow-md text-xs font-bold text-blue-600 border border-blue-200">
+                    {lang === 'th' ? 'คุณ' : 'You'}
+                  </div>
+                </div>
+
+                {/* Location Pin - Job Location */}
+                <div className="absolute top-1/3 left-1/3 flex flex-col items-center animate-bounce">
+                  <div className="bg-red-600 p-3 rounded-t-full rounded-b-full shadow-xl relative">
+                    <MapPin size={24} className="text-white" fill="white" />
+                  </div>
+                  <div className="mt-1 bg-white px-3 py-1.5 rounded-lg shadow-lg text-xs font-bold text-red-600 border-2 border-red-200">
+                    {job.company}
+                  </div>
+                </div>
+
+                {/* Distance Line */}
+                <svg className="absolute inset-0 w-full h-full pointer-events-none">
+                  <line 
+                    x1="66%" y1="66%" 
+                    x2="33%" y2="33%" 
+                    stroke="#dc2626" 
+                    strokeWidth="2" 
+                    strokeDasharray="5,5"
+                    opacity="0.3"
+                  />
+                </svg>
+              </div>
+
+              {/* Distance Badge */}
+              <div className="absolute top-4 right-4 bg-white px-3 py-2 rounded-xl shadow-lg border border-gray-200 flex items-center gap-2">
+                <MapPin size={16} className="text-red-600" />
+                <span className="text-sm font-bold text-gray-900">{job.distance}</span>
+              </div>
+
+              {/* Navigate Button */}
+              <button className="absolute bottom-4 left-4 right-4 bg-red-600 text-white py-3 rounded-xl font-bold shadow-lg flex items-center justify-center gap-2 hover:bg-red-700 transition-colors">
+                <MapPin size={18} />
+                {lang === 'th' ? 'เปิดใน Google Maps' : 'Open in Google Maps'}
+              </button>
+            </div>
+
+            {/* Address Details */}
+            <div className="mt-4 bg-gray-50 border border-gray-200 rounded-xl p-4">
+              <div className="flex items-start gap-3">
+                <div className="bg-red-50 p-2 rounded-lg flex-shrink-0">
+                  <MapPin size={20} className="text-red-600" />
+                </div>
+                <div>
+                  <p className="text-xs font-medium text-gray-500 mb-1">{lang === 'th' ? 'ที่อยู่' : 'Address'}</p>
+                  <p className="text-sm font-bold text-gray-900 leading-relaxed">
+                    {lang === 'th' 
+                      ? '123 ถนนสุขุมวิท แขวงคลองเตย เขตคลองเตย กรุงเทพมหานคร 10110'
+                      : '123 Sukhumvit Road, Khlong Toei, Bangkok 10110'}
+                  </p>
+                </div>
+              </div>
             </div>
           </section>
         </div>
@@ -665,6 +1456,7 @@ export default function App() {
   const [searchQuery, setSearchQuery] = useState(''); // NEW: Job Search Query
   const [isSearchOpen, setIsSearchOpen] = useState(false); // NEW: Search bar visibility
   const [isFiltersOpen, setIsFiltersOpen] = useState(false); // NEW: Advanced filters visibility
+  const [isLocationPickerOpen, setIsLocationPickerOpen] = useState(false); // NEW: Location picker visibility
   const [advancedFilters, setAdvancedFilters] = useState({
     jobType: 'all',
     minPay: '',
@@ -874,16 +1666,15 @@ export default function App() {
             <Menu size={20} className="text-gray-700" />
           </button>
           
-          <div className="flex items-center bg-gray-50 rounded-xl px-3 py-1.5 flex-1 min-w-0">
+          <button 
+            onClick={() => setIsLocationPickerOpen(true)}
+            className="flex items-center bg-gray-50 rounded-xl px-3 py-1.5 flex-1 min-w-0 hover:bg-gray-100 transition-colors active:scale-95"
+          >
             <MapPin className="text-red-600 mr-1.5 flex-shrink-0" size={14} />
-            <input 
-              type="text" 
-              value={location}
-              onChange={(e) => setLocation(e.target.value)}
-              className="bg-transparent border-none outline-none text-gray-700 text-xs w-full font-medium placeholder-gray-400 truncate"
-              placeholder={t.home.locationPlaceholder}
-            />
-          </div>
+            <span className="bg-transparent text-gray-700 text-xs w-full font-medium truncate text-left">
+              {location || t.home.locationPlaceholder}
+            </span>
+          </button>
           
           <div className="flex items-center gap-1.5 flex-shrink-0">
             <button 
@@ -935,9 +1726,10 @@ export default function App() {
         )}
       </div>
 
-      {/* Compact Date Picker - Horizontal Scroll Only */}
+      {/* Compact Date & Time Picker */}
       <div className="bg-white border-b border-gray-100 py-2">
-        <div className="overflow-x-auto scrollbar-hide">
+        {/* Date Picker */}
+        <div className="overflow-x-auto scrollbar-hide mb-2">
           <div className="flex gap-2 px-4">
             {(() => {
               const dates = [];
@@ -980,25 +1772,30 @@ export default function App() {
             })()}
           </div>
         </div>
-      </div>
 
-      {/* Compact Job Type Filters */}
-      <div className="bg-white border-b border-gray-100 px-4 py-2">
-        <div className="flex gap-2 overflow-x-auto scrollbar-hide">
-          {JOB_TYPES.map((type) => (
-            <button
-              key={type.id}
-              onClick={() => setFilter(type.id)}
-              className={`flex items-center px-3 py-1.5 rounded-lg whitespace-nowrap text-xs font-semibold transition-all ${
-                filter === type.id 
-                  ? 'bg-red-600 text-white shadow-sm shadow-red-200' 
-                  : 'bg-gray-50 text-gray-600 hover:bg-gray-100'
-              }`}
-            >
-              {type.icon && <span className="mr-1.5 opacity-90 text-sm">{type.icon}</span>}
-              {t.home.filters[type.id]}
-            </button>
-          ))}
+        {/* Time Picker - Shift Start Times */}
+        <div className="overflow-x-auto scrollbar-hide">
+          <div className="flex gap-2 px-4">
+            {['06:00', '08:00', '10:00', '12:00', '14:00', '16:00', '18:00', '20:00', '22:00'].map((time) => {
+              const isSelected = selectedTime === time;
+              return (
+                <button
+                  key={time}
+                  onClick={() => setSelectedTime(time)}
+                  className={`
+                    flex-shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-lg whitespace-nowrap text-xs font-semibold transition-all
+                    ${isSelected 
+                      ? 'bg-red-600 text-white shadow-sm shadow-red-200' 
+                      : 'bg-gray-50 text-gray-600 hover:bg-gray-100'
+                    }
+                  `}
+                >
+                  <Clock size={13} className={isSelected ? 'text-white' : 'text-gray-400'} />
+                  {time}
+                </button>
+              );
+            })}
+          </div>
         </div>
       </div>
 
@@ -1037,6 +1834,15 @@ export default function App() {
         onFilterChange={handleFilterChange}
         lang={lang}
         t={t}
+      />
+
+      {/* Location Picker Modal */}
+      <LocationPickerModal 
+        isOpen={isLocationPickerOpen}
+        onClose={() => setIsLocationPickerOpen(false)}
+        location={location}
+        setLocation={setLocation}
+        lang={lang}
       />
     </div>
   );
