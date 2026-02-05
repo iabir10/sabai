@@ -199,7 +199,8 @@ const MOCK_JOBS = [
     description: 'Part-time evening shift (3-4 hours). Perfect for students or those looking for extra income. Flexible schedule, work 2-3 days per week.',
     descriptionTh: 'งานพาร์ทไทม์กะเย็น (3-4 ชั่วโมง) เหมาะสำหรับนักศึกษาหรือผู้ที่ต้องการรายได้เสริม ตารางงานยืดหยุ่น ทำงาน 2-3 วันต่อสัปดาห์',
     requirements: ['Part-time availability', 'English communication', 'Positive attitude'],
-    requirementsTh: ['มีเวลาทำงานพาร์ทไทม์', 'สื่อสารภาษาอังกฤษได้', 'ทัศนคติเชิงบวก']
+    requirementsTh: ['มีเวลาทำงานพาร์ทไทม์', 'สื่อสารภาษาอังกฤษได้', 'ทัศนคติเชิงบวก'],
+    availableDays: [1, 3, 5, 6] // Mon, Wed, Fri, Sat
   },
   { 
     id: 2, 
@@ -218,7 +219,8 @@ const MOCK_JOBS = [
     description: 'Lunch shift only (11AM-3PM). Great for students with morning classes. Weekend shifts available with extra pay.',
     descriptionTh: 'กะเที่ยงเท่านั้น (11.00-15.00 น.) เหมาะสำหรับนักศึกษาที่เรียนเช้า มีกะวันหยุดสุดสัปดาห์พร้อมค่าแรงพิเศษ',
     requirements: ['Food safety basic knowledge', 'Can work weekends', 'Team player'],
-    requirementsTh: ['ความรู้พื้นฐานความปลอดภัยอาหาร', 'ทำงานวันหยุดได้', 'ทำงานเป็นทีมได้']
+    requirementsTh: ['ความรู้พื้นฐานความปลอดภัยอาหาร', 'ทำงานวันหยุดได้', 'ทำงานเป็นทีมได้'],
+    availableDays: [2, 4, 6, 0] // Tue, Thu, Sat, Sun
   },
   { 
     id: 3, 
@@ -237,7 +239,8 @@ const MOCK_JOBS = [
     description: 'Weekend shifts only (Sat-Sun, 5PM-11PM). Perfect for extra weekend income. Free dinner included.',
     descriptionTh: 'กะวันหยุดสุดสัปดาห์เท่านั้น (เสาร์-อาทิตย์ 17.00-23.00 น.) เหมาะสำหรับหารายได้พิเศษช่วงวันหยุด ฟรีอาหารเย็น',
     requirements: ['Weekend availability', 'Physical stamina', 'Reliable'],
-    requirementsTh: ['มีเวลาวันหยุดสุดสัปดาห์', 'ร่างกายแข็งแรง', 'ตรงต่อเวลา']
+    requirementsTh: ['มีเวลาวันหยุดสุดสัปดาห์', 'ร่างกายแข็งแรง', 'ตรงต่อเวลา'],
+    availableDays: [6, 0] // Sat, Sun
   },
   { 
     id: 4, 
@@ -256,7 +259,8 @@ const MOCK_JOBS = [
     description: 'Premium evening shift (8PM-12AM). High tips expected. Perfect for experienced bartenders looking for extra income.',
     descriptionTh: 'กะเย็นพรีเมี่ยม (20.00-00.00 น.) ได้ทิปสูง เหมาะสำหรับบาร์เทนเดอร์มืออาชีพที่ต้องการรายได้เสริม',
     requirements: ['2+ years experience', 'English fluent', 'Professional appearance'],
-    requirementsTh: ['ประสบการณ์ 2 ปีขึ้นไป', 'ภาษาอังกฤษคล่องแคล่ว', 'บุคลิกภาพดี']
+    requirementsTh: ['ประสบการณ์ 2 ปีขึ้นไป', 'ภาษาอังกฤษคล่องแคล่ว', 'บุคลิกภาพดี'],
+    availableDays: [4, 5, 6, 0] // Thu, Fri, Sat, Sun
   },
   { 
     id: 5, 
@@ -275,7 +279,8 @@ const MOCK_JOBS = [
     description: 'Staff needed for a 3-day exhibition. Checking tickets and guiding guests.',
     descriptionTh: 'ต้องการพนักงานสำหรับงานนิทรรศการ 3 วัน ตรวจตั๋วและแนะนำแขก',
     requirements: ['Good communication', 'Stand for long periods', 'Polite'],
-    requirementsTh: ['สื่อสารดี', 'ยืนได้นาน', 'สุภาพ']
+    requirementsTh: ['สื่อสารดี', 'ยืนได้นาน', 'สุภาพ'],
+    availableDays: [1, 2, 3, 4, 5] // Mon-Fri
   },
   { 
     id: 6, 
@@ -294,7 +299,8 @@ const MOCK_JOBS = [
     description: 'Early morning shift serving coffee. Great for early risers. Free drinks during shift.',
     descriptionTh: 'กะเช้าทำกาแฟ เหมาะสำหรับคนตื่นเช้า ได้ดื่มฟรีระหว่างทำงาน',
     requirements: ['Coffee knowledge', 'Friendly personality', 'Early riser'],
-    requirementsTh: ['มีความรู้เรื่องกาแฟ', 'บุคลิกเป็นมิตร', 'ตื่นเช้าได้']
+    requirementsTh: ['มีความรู้เรื่องกาแฟ', 'บุคลิกเป็นมิตร', 'ตื่นเช้าได้'],
+    availableDays: [0, 1, 2, 3, 4, 5, 6] // Every day
   },
   { 
     id: 7, 
@@ -313,7 +319,8 @@ const MOCK_JOBS = [
     description: 'Fine dining host position. Greeting guests and managing reservations.',
     descriptionTh: 'ตำแหน่งพนักงานต้อนรับร้านอาหารชั้นเลิศ ทักทายลูกค้าและจัดการการจอง',
     requirements: ['Professional appearance', 'English fluent', 'Organized'],
-    requirementsTh: ['บุคลิกภาพดี', 'ภาษาอังกฤษดี', 'เป็นระเบียบ']
+    requirementsTh: ['บุคลิกภาพดี', 'ภาษาอังกฤษดี', 'เป็นระเบียบ'],
+    availableDays: [2, 3, 4, 5, 6, 0] // Wed-Sun
   },
   { 
     id: 8, 
@@ -332,7 +339,8 @@ const MOCK_JOBS = [
     description: 'Deliver food from kitchen to tables quickly and efficiently.',
     descriptionTh: 'ส่งอาหารจากครัวไปยังโต๊ะลูกค้าอย่างรวดเร็วและมีประสิทธิภาพ',
     requirements: ['Fast-paced work', 'Good memory', 'Team player'],
-    requirementsTh: ['ทำงานเร็ว', 'จำดี', 'ทำงานเป็นทีม']
+    requirementsTh: ['ทำงานเร็ว', 'จำดี', 'ทำงานเป็นทีม'],
+    availableDays: [1, 3, 5, 6, 0] // Mon, Wed, Fri, Sat, Sun
   },
   { 
     id: 9, 
@@ -351,7 +359,8 @@ const MOCK_JOBS = [
     description: 'Assist sushi chef with prep work. Training provided for motivated candidates.',
     descriptionTh: 'ช่วยเชฟซูชิเตรียมวัตถุดิบ มีการฝึกสอนให้สำหรับผู้ที่กระตือรือร้น',
     requirements: ['Detail-oriented', 'Clean habits', 'Willing to learn'],
-    requirementsTh: ['ใส่ใจรายละเอียด', 'สะอาด', 'อยากเรียนรู้']
+    requirementsTh: ['ใส่ใจรายละเอียด', 'สะอาด', 'อยากเรียนรู้'],
+    availableDays: [2, 3, 4, 5, 6, 0] // Tue-Sun
   },
   { 
     id: 10, 
@@ -370,7 +379,8 @@ const MOCK_JOBS = [
     description: 'Early morning cleaning before mall opens. Simple and straightforward work.',
     descriptionTh: 'ทำความสะอาดเช้าก่อนห้างเปิด งานง่ายและตรงไปตรงมา',
     requirements: ['Punctual', 'Physical fitness', 'Reliable'],
-    requirementsTh: ['ตรงเวลา', 'แข็งแรง', 'ไว้ใจได้']
+    requirementsTh: ['ตรงเวลา', 'แข็งแรง', 'ไว้ใจได้'],
+    availableDays: [0, 1, 2, 3, 4, 5, 6] // Every day
   },
   { 
     id: 11, 
@@ -389,7 +399,8 @@ const MOCK_JOBS = [
     description: 'Afternoon shift handling payments and orders. Dessert discount for staff!',
     descriptionTh: 'กะบ่ายรับเงินและรับออเดอร์ พนักงานได้ส่วนลดขนม!',
     requirements: ['Basic math', 'Friendly', 'POS experience preferred'],
-    requirementsTh: ['คิดเลขเป็น', 'ยิ้มแย้ม', 'มีประสบการณ์จะดี']
+    requirementsTh: ['คิดเลขเป็น', 'ยิ้มแย้ม', 'มีประสบการณ์จะดี'],
+    availableDays: [1, 2, 3, 4, 5] // Mon-Fri
   },
   { 
     id: 12, 
@@ -408,7 +419,8 @@ const MOCK_JOBS = [
     description: 'Prepare pizza toppings and ingredients for lunch rush. Training provided.',
     descriptionTh: 'เตรียมท็อปปิ้งพิซซ่าและวัตถุดิบสำหรับช่วงเที่ยง มีการอบรม',
     requirements: ['Food safety knowledge', 'Fast learner', 'Team player'],
-    requirementsTh: ['รู้เรื่องสุขอนามัย', 'เรียนรู้เร็ว', 'ทำงานเป็นทีม']
+    requirementsTh: ['รู้เรื่องสุขอนามัย', 'เรียนรู้เร็ว', 'ทำงานเป็นทีม'],
+    availableDays: [0, 1, 2, 3, 4, 5, 6] // Every day
   },
   { 
     id: 13, 
@@ -427,7 +439,8 @@ const MOCK_JOBS = [
     description: 'Support bartender by restocking and cleaning. Great tips potential.',
     descriptionTh: 'ช่วยบาร์เทนเดอร์เติมของและทำความสะอาด โอกาสได้ทิปดี',
     requirements: ['Night shift OK', 'Energetic', '21+ years old'],
-    requirementsTh: ['ทำงานกลางคืนได้', 'กระฉับกระเฉง', 'อายุ 21 ขึ้นไป']
+    requirementsTh: ['ทำงานกลางคืนได้', 'กระฉับกระเฉง', 'อายุ 21 ขึ้นไป'],
+    availableDays: [3, 4, 5, 6, 0] // Wed-Sun
   },
   { 
     id: 14, 
@@ -446,7 +459,8 @@ const MOCK_JOBS = [
     description: 'Serve popcorn and drinks at cinema. Free movie tickets for staff!',
     descriptionTh: 'เสิร์ฟป๊อปคอร์นและเครื่องดื่มในโรงหนัง พนักงานดูหนังฟรี!',
     requirements: ['Customer service', 'Weekends available', 'Friendly'],
-    requirementsTh: ['บริการดี', 'ทำวันหยุดได้', 'เป็นมิตร']
+    requirementsTh: ['บริการดี', 'ทำวันหยุดได้', 'เป็นมิตร'],
+    availableDays: [5, 6, 0] // Fri, Sat, Sun
   },
   { 
     id: 15, 
@@ -465,7 +479,8 @@ const MOCK_JOBS = [
     description: 'Early morning baking assistant. Learn professional baking skills.',
     descriptionTh: 'ช่วยทำเบเกอรี่เช้าตรู่ เรียนรู้ฝีมือทำขนมแบบมืออาชีพ',
     requirements: ['Early morning', 'Following recipes', 'Clean workspace'],
-    requirementsTh: ['ตื่นเช้าได้', 'ทำตามสูตร', 'เก็บที่ทำงานสะอาด']
+    requirementsTh: ['ตื่นเช้าได้', 'ทำตามสูตร', 'เก็บที่ทำงานสะอาด'],
+    availableDays: [0, 1, 2, 3, 4, 5, 6] // Every day
   },
   { 
     id: 16, 
@@ -484,7 +499,8 @@ const MOCK_JOBS = [
     description: 'Clear and set tables during lunch rush. Entry-level position.',
     descriptionTh: 'เก็บและจัดโต๊ะช่วงมื้อเที่ยง งานเริ่มต้นสำหรับมือใหม่',
     requirements: ['Physical work', 'Quick pace', 'Reliable'],
-    requirementsTh: ['ใช้แรงงาน', 'ทำงานเร็ว', 'ไว้ใจได้']
+    requirementsTh: ['ใช้แรงงาน', 'ทำงานเร็ว', 'ไว้ใจได้'],
+    availableDays: [1, 2, 3, 4, 5, 6, 0] // Every day
   },
   { 
     id: 17, 
@@ -503,7 +519,8 @@ const MOCK_JOBS = [
     description: 'Lunch time food delivery. Own motorcycle required. Per delivery payment.',
     descriptionTh: 'ส่งอาหารช่วงมื้อเที่ยง ต้องมีรถมอเตอร์ไซค์เป็นของตัวเอง จ่ายต่อเที่ยว',
     requirements: ['Own motorcycle', 'Driving license', 'GPS navigation'],
-    requirementsTh: ['มีมอเตอร์ไซค์', 'ใบขับขี่', 'ใช้แผนที่ได้']
+    requirementsTh: ['มีมอเตอร์ไซค์', 'ใบขับขี่', 'ใช้แผนที่ได้'],
+    availableDays: [1, 2, 3, 4, 5] // Mon-Fri
   },
   { 
     id: 18, 
@@ -522,7 +539,8 @@ const MOCK_JOBS = [
     description: 'Make Thai tea and beverages. Recipe training provided.',
     descriptionTh: 'ทำชาไทยและเครื่องดื่ม มีการสอนสูตร',
     requirements: ['Quick learner', 'Neat appearance', 'Customer friendly'],
-    requirementsTh: ['เรียนรู้เร็ว', 'แต่งตัวเรียบร้อย', 'บริการดี']
+    requirementsTh: ['เรียนรู้เร็ว', 'แต่งตัวเรียบร้อย', 'บริการดี'],
+    availableDays: [0, 2, 4, 5, 6] // Sun, Tue, Thu, Fri, Sat
   },
   { 
     id: 19, 
@@ -541,7 +559,8 @@ const MOCK_JOBS = [
     description: 'Morning breakfast buffet service. Maintain food stations and cleanliness.',
     descriptionTh: 'เสิร์ฟบุฟเฟต์เช้า ดูแลจุดอาหารและความสะอาด',
     requirements: ['Morning person', 'Organized', 'Hotel experience preferred'],
-    requirementsTh: ['ตื่นเช้าได้', 'เป็นระเบียบ', 'มีประสบการณ์โรงแรมจะดี']
+    requirementsTh: ['ตื่นเช้าได้', 'เป็นระเบียบ', 'มีประสบการณ์โรงแรมจะดี'],
+    availableDays: [0, 1, 2, 3, 4, 5, 6] // Every day
   },
   { 
     id: 20, 
@@ -560,7 +579,8 @@ const MOCK_JOBS = [
     description: 'Assist in Italian kitchen. Learn authentic recipes from Italian chef.',
     descriptionTh: 'ช่วยงานครัวอิตาเลียน เรียนรู้สูตรแท้จากเชฟอิตาเลียน',
     requirements: ['Pasta knowledge', 'Clean habits', 'Kitchen safety'],
-    requirementsTh: ['รู้จักพาสต้า', 'สะอาด', 'ใส่ใจความปลอดภัย']
+    requirementsTh: ['รู้จักพาสต้า', 'สะอาด', 'ใส่ใจความปลอดภัย'],
+    availableDays: [1, 3, 5, 6, 0] // Mon, Wed, Fri, Sat, Sun
   },
   { 
     id: 21, 
@@ -579,7 +599,8 @@ const MOCK_JOBS = [
     description: 'Make fresh juices and smoothies. Fun, energetic environment.',
     descriptionTh: 'ทำน้ำผลไม้และสมูทตี้ บรรยากาศสนุกสนาน',
     requirements: ['Energetic', 'Blender skills', 'Smile'],
-    requirementsTh: ['กระตือรือร้น', 'ปั่นเป็น', 'ยิ้มแย้ม']
+    requirementsTh: ['กระตือรือร้น', 'ปั่นเป็น', 'ยิ้มแย้ม'],
+    availableDays: [0, 1, 2, 3, 4, 5, 6] // Every day
   },
   { 
     id: 22, 
@@ -598,7 +619,8 @@ const MOCK_JOBS = [
     description: '5-star hotel kitchen. Good pay and working conditions.',
     descriptionTh: 'ครัวโรงแรม 5 ดาว ค่าแรงดีและสภาพการทำงานดี',
     requirements: ['Physical stamina', 'Team work', 'Hygiene conscious'],
-    requirementsTh: ['แข็งแรง', 'ทำงานเป็นทีม', 'ใส่ใจสุขอนามัย']
+    requirementsTh: ['แข็งแรง', 'ทำงานเป็นทีม', 'ใส่ใจสุขอนามัย'],
+    availableDays: [0, 1, 2, 3, 4, 5, 6] // Every day
   },
   { 
     id: 23, 
@@ -617,7 +639,8 @@ const MOCK_JOBS = [
     description: 'Handle payments for lunch service. Japanese restaurant experience.',
     descriptionTh: 'รับเงินช่วงมื้อเที่ยง ประสบการณ์ร้านอาหารญี่ปุ่น',
     requirements: ['Cash handling', 'Basic Japanese preferred', 'Polite'],
-    requirementsTh: ['จัดการเงิน', 'พูดญี่ปุ่นเบื้องต้นจะดี', 'สุภาพ']
+    requirementsTh: ['จัดการเงิน', 'พูดญี่ปุ่นเบื้องต้นจะดี', 'สุภาพ'],
+    availableDays: [2, 3, 4, 5, 6, 0] // Tue-Sun
   },
   { 
     id: 24, 
@@ -636,7 +659,8 @@ const MOCK_JOBS = [
     description: 'Prepare salads and cold dishes. No cooking involved, perfect for beginners.',
     descriptionTh: 'เตรียมสลัดและอาหารเย็น ไม่ต้องปรุง เหมาะมือใหม่',
     requirements: ['Cleanliness', 'Knife skills basic', 'Organized'],
-    requirementsTh: ['รักความสะอาด', 'ใช้มีดเป็น', 'เป็นระเบียบ']
+    requirementsTh: ['รักความสะอาด', 'ใช้มีดเป็น', 'เป็นระเบียบ'],
+    availableDays: [0, 1, 2, 3, 4, 5, 6] // Every day
   },
   { 
     id: 25, 
@@ -655,7 +679,8 @@ const MOCK_JOBS = [
     description: 'Serve wine and appetizers. Wine knowledge training provided.',
     descriptionTh: 'เสิร์ฟไวน์และอาหารว่าง มีการอบรมความรู้เรื่องไวน์',
     requirements: ['21+ years old', 'Professional', 'Wine interest'],
-    requirementsTh: ['อายุ 21 ขึ้นไป', 'มืออาชีพ', 'สนใจไวน์']
+    requirementsTh: ['อายุ 21 ขึ้นไป', 'มืออาชีพ', 'สนใจไวน์'],
+    availableDays: [4, 5, 6, 0] // Thu, Fri, Sat, Sun
   },
   { 
     id: 26, 
@@ -674,7 +699,8 @@ const MOCK_JOBS = [
     description: 'Early morning prep for lunch service. Cut vegetables and prepare ingredients.',
     descriptionTh: 'เตรียมวัตถุดิบเช้าสำหรับมื้อเที่ยง หั่นผักและเตรียมส่วนผสม',
     requirements: ['Early start', 'Knife skills', 'Follow instructions'],
-    requirementsTh: ['เริ่มเช้า', 'ใช้มีดเป็น', 'ทำตามคำสั่ง']
+    requirementsTh: ['เริ่มเช้า', 'ใช้มีดเป็น', 'ทำตามคำสั่ง'],
+    availableDays: [0, 1, 2, 3, 4, 5, 6] // Every day
   },
   { 
     id: 27, 
@@ -693,7 +719,8 @@ const MOCK_JOBS = [
     description: 'Breakfast shift taking orders. Fast-paced environment, comprehensive training.',
     descriptionTh: 'กะเช้ารับออเดอร์ จังหวะการทำงานเร็ว มีการฝึกอบรมครบถ้วน',
     requirements: ['Customer service', 'Fast learner', 'Stamina'],
-    requirementsTh: ['บริการลูกค้า', 'เรียนรู้เร็ว', 'ทนทาน']
+    requirementsTh: ['บริการลูกค้า', 'เรียนรู้เร็ว', 'ทนทาน'],
+    availableDays: [0, 1, 2, 3, 4, 5, 6] // Every day
   },
   { 
     id: 28, 
@@ -712,7 +739,8 @@ const MOCK_JOBS = [
     description: 'Set up tables and chairs for events. Evening shifts, occasional weekends.',
     descriptionTh: 'จัดโต๊ะเก้าอี้สำหรับงานอีเวนต์ กะเย็น บางครั้งวันหยุด',
     requirements: ['Physical work', 'Team player', 'Flexible schedule'],
-    requirementsTh: ['ใช้แรงงาน', 'ทำงานเป็นทีม', 'ตารางยืดหยุ่น']
+    requirementsTh: ['ใช้แรงงาน', 'ทำงานเป็นทีม', 'ตารางยืดหยุ่น'],
+    availableDays: [3, 4, 5, 6, 0] // Wed-Sun
   },
   { 
     id: 29, 
@@ -731,7 +759,8 @@ const MOCK_JOBS = [
     description: 'Evening shift frying chicken. Full training provided, uniform included.',
     descriptionTh: 'กะเย็นทอดไก่ มีการอบรมเต็มรูปแบบ รวมเครื่องแบบ',
     requirements: ['Handle hot oil', 'Fast pace', 'Team work'],
-    requirementsTh: ['จัดการน้ำมันร้อน', 'ทำงานเร็ว', 'ทำงานเป็นทีม']
+    requirementsTh: ['จัดการน้ำมันร้อน', 'ทำงานเร็ว', 'ทำงานเป็นทีม'],
+    availableDays: [1, 2, 3, 4, 5, 6, 0] // Every day
   },
   { 
     id: 30, 
@@ -750,7 +779,8 @@ const MOCK_JOBS = [
     description: 'Organize and manage food storage. Check expiry dates and stock levels.',
     descriptionTh: 'จัดเก็บและจัดการคลังอาหาร ตรวจวันหมดอายุและสต็อก',
     requirements: ['Organized', 'Inventory knowledge', 'Physical work'],
-    requirementsTh: ['เป็นระเบียบ', 'รู้เรื่องสต็อก', 'ใช้แรงงาน']
+    requirementsTh: ['เป็นระเบียบ', 'รู้เรื่องสต็อก', 'ใช้แรงงาน'],
+    availableDays: [1, 2, 3, 4, 5] // Mon-Fri
   },
 ];
 
@@ -1554,6 +1584,18 @@ export default function App() {
     
     return matchesType && matchesSearch && matchesMinPay && matchesMaxPay && 
            matchesDistance && matchesRating;
+  }).sort((a, b) => {
+    // Sort by date availability: available jobs first, then unavailable
+    const selectedDayOfWeek = selectedDate.getDay();
+    const aAvailable = a.availableDays.includes(selectedDayOfWeek);
+    const bAvailable = b.availableDays.includes(selectedDayOfWeek);
+    
+    // Available jobs come first (higher sort priority)
+    if (aAvailable && !bAvailable) return -1;
+    if (!aAvailable && bAvailable) return 1;
+    
+    // If both available or both unavailable, sort by rating (highest first)
+    return b.rating - a.rating;
   });
 
   // --- Views ---
