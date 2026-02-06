@@ -129,3 +129,67 @@ input:focus-visible {
 ::-webkit-scrollbar-thumb:hover {
   background: #b91c1c;
 }
+
+/* Splash Screen Animations */
+@keyframes slideUpSplash {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rippleEffect {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+@keyframes loadProgress {
+  0% {
+    width: 0%;
+    transform: translateX(-10%);
+  }
+  50% {
+    width: 100%;
+    transform: translateX(0);
+  }
+  100% {
+    width: 100%;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fadeInSplash {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-slideUp {
+  animation: slideUpSplash 0.8s ease-out forwards;
+}
+
+.animate-ripple {
+  animation: rippleEffect 2s infinite cubic-bezier(0.1, 0.6, 0.4, 1);
+}
+
+.animate-loadProgress {
+  animation: loadProgress 2.5s ease-in-out infinite;
+}
+
+.animate-fadeIn {
+  animation: fadeInSplash 1s ease-out forwards;
+  opacity: 0;
+}

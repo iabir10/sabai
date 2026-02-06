@@ -34,6 +34,7 @@ import {
   LogOut,
   HelpCircle
 } from 'lucide-react';
+import SplashScreen from './SplashScreen';
 
 // --- Translations ---
 
@@ -1475,6 +1476,7 @@ const JobDetailView = ({ job, isSaved, onToggleSave, onApply, onBack, lang, t })
 
 // 3. Main App Component
 export default function App() {
+  const [showSplash, setShowSplash] = useState(true);
   const [lang, setLang] = useState('th');
   const [activeTab, setActiveTab] = useState('home');
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -2080,6 +2082,10 @@ export default function App() {
   );
 
   // Render either the main app or the job details
+  if (showSplash) {
+    return <SplashScreen onComplete={() => setShowSplash(false)} />;
+  }
+
   return (
     <div className="bg-gray-50 h-screen w-full flex flex-col relative font-sans text-gray-900 overflow-hidden selection:bg-red-100">
       
