@@ -37,7 +37,7 @@ const SplashScreen = ({ onComplete }) => {
       {/* Tagline */}
       <div className="text-center mb-12 animate-fadeIn" style={{ animationDelay: '0.3s' }}>
         <h1 className="text-3xl font-bold text-gray-800 mb-2">HATANG</h1>
-        <p className="text-lg text-gray-600">Job for Everyone</p>
+        <p className="text-lg text-gray-600">FAST JOB FASTER MONEY</p>
       </div>
 
       {/* Loading Bar */}
