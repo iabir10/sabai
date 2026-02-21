@@ -2035,7 +2035,7 @@ export default function App() {
         <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-orange-50 to-white/0"></div>
         <div className="relative z-10 px-6">
           <div className="w-32 h-32 bg-gray-100 rounded-full mx-auto mb-5 flex items-center justify-center text-gray-400 text-4xl font-bold border-4 border-white shadow-xl overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=400&q=80" alt="Profile" className="w-full h-full object-cover" />
+            <img src="/S__7225355.jpg" alt="Profile" className="w-full h-full object-cover" />
           </div>
           <h2 className="text-2xl font-extrabold text-gray-900">{lang === 'th' ? 'สมชาย ใจดี' : 'Somchai Jaidee'}</h2>
           <p className="text-gray-500 text-sm flex items-center justify-center mt-2 font-medium">
