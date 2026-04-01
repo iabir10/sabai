@@ -28,16 +28,15 @@ const SplashScreen = ({ onComplete }) => {
 
         {/* Logo Image */}
         <img
-          src="/logoHT02.png"
-          alt="HATANG"
+          src="/newlogo.png"
+          alt="Logo"
           className="w-40 h-auto z-10 drop-shadow-lg"
         />
       </div>
 
       {/* Tagline */}
       <div className="text-center mb-12 animate-fadeIn" style={{ animationDelay: '0.3s' }}>
-        <h1 className="text-3xl font-bold text-gray-800 mb-2">HATANG</h1>
-        <p className="text-lg text-gray-600">FAST JOB FASTER MONEY</p>
+        <p className="text-lg text-gray-600">เงินดี งานเดิน</p>
       </div>
 
       {/* Loading Bar */}
