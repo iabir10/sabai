@@ -783,6 +783,26 @@ const MOCK_JOBS = [
     requirementsTh: ['เป็นระเบียบ', 'รู้เรื่องสต็อก', 'ใช้แรงงาน'],
     availableDays: [1, 2, 3, 4, 5] // Mon-Fri
   },
+  { 
+    id: 31, 
+    title: 'พนักงานเสิร์ฟ (สุกี้ส่วนตัวพิเศษ)', 
+    titleEn: 'Server - Suki Tenoi',
+    role: 'พนักงานเสิร์ฟ',
+    roleEn: 'Server',
+    company: 'Suki Tenoi', 
+    type: 'server', 
+    distance: '1.5 km', 
+    pay: '฿300',
+    shiftStart: '17:00',
+    shiftEnd: '23:00',
+    rating: 4.9, 
+    image: 'https://images.unsplash.com/photo-1567521464027-f127ff144326?w=800&q=80',
+    description: '🌟 FEATURED: Join Suki Tenoi\'s premium team! Serve in Bangkok\'s top personal sukiyaki restaurant. High tips, great atmosphere, training provided.',
+    descriptionTh: '🌟 งานวิศেษ: ร่วมทีม Suki Tenoi ร้านเนื้อสุกี้ส่วนตัวชั้นนำของกรุงเทพ ค่าอื่นเยอะ บรรยากาศดี มีการฝึกอบรม',
+    requirements: ['Premium service experience', 'Japanese cuisine knowledge', 'Team player', 'English communication'],
+    requirementsTh: ['ประสบการณ์บริการระดับพรีเมียม', 'ความรู้เกี่ยวกับอาหารญี่ปุ่น', 'ทำงานเป็นทีม', 'สื่อสารภาษาอังกฤษได้'],
+    availableDays: [1, 2, 3, 4, 5, 6, 0] // Every day
+  },
 ];
 
 const TRAINING_VIDEOS = [
